@@ -1,0 +1,22 @@
+managed implementation in class zbp_mdb_i_config unique;
+//strict;
+
+define behavior for YMDB_I_CONFIG alias Config
+persistent table YMDB_CONFIG
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+//  internal create;
+  update;
+  delete;
+
+  static action (features : global) create;
+
+  field (readonly) Uname;
+
+  mapping for ymdb_config {
+    Uname = uname;
+    ApiKey = api_key;
+  }
+}

@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access control for YMDB_C_CONFIG'
+@MappingRole: true
+define role YMDB_C_CONFIG {
+    grant
+        select
+            on
+                YMDB_C_CONFIG
+                    where
+                        inheriting conditions from entity YMDB_I_CONFIG;
+                        
+}

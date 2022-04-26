@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition of Config'
+define service YY_SD_CONFIG {
+  expose YMDB_C_CONFIG as Config;
+}

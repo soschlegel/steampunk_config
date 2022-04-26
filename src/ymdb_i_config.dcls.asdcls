@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access control for YMDB_I_CONFIG'
+@MappingRole: true
+define role YMDB_I_CONFIG {
+    grant
+        select
+            on
+                YMDB_I_CONFIG
+                    where
+                        Uname = aspect user;
+                        
+}
